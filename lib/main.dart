@@ -103,7 +103,7 @@ SwuMessage buildEmailData(DateTime startDate, DateTime endDate, List<TallyTempla
   final swuTemplateId = envVarRequired("SCI_TALLY_SWU_TEMPLATE_ID");
   final formatEmail = (String name) => "$name@$emailDomain";
   final SwuRecipient emailRecipient =
-      isLive ? new SwuRecipient("Mike", formatEmail("mikef")) : new SwuRecipient("Joshua Harms", formatEmail("josh"));
+      isLive ? new SwuRecipient("Jeanette", formatEmail("jeanette")) : new SwuRecipient("Joshua Harms", formatEmail("josh"));
   final List<SwuRecipient> ccs = isLive ? fromJson(envVarRequired("SCI_TALLY_CC_LIST"), [List, SwuRecipient]) : [];
   final sender =
       new SwuSender("KMSignalR Superintendent", formatEmail("superintendent"), formatEmail("superintendent"));
