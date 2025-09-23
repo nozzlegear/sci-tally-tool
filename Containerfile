@@ -18,8 +18,9 @@ FROM scratch
 COPY --from=build /runtime/ /
 COPY --from=build /app/bin/main /app/bin/
 
+ARG REPO_URL
 ARG COMMIT_SHA
-LABEL org.opencontainers.image.source=https://github.com/nozzlegear/sci-tally-tool
+LABEL org.opencontainers.image.source=$REPO_URL
 LABEL org.opencontainers.image.revision=$COMMIT_SHA
 
 CMD ["/app/bin/main"]

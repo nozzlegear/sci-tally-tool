@@ -1,4 +1,8 @@
-Required environment variables:
+# SCI Tally Tool
+
+A containerized Dart application that fetches tally data from an API and sends email reports via SendWithUs.
+
+## Required Runtime Environment Variables
 
 |Variable|Description|Example|
 ----------|--------------|-------|
@@ -9,3 +13,7 @@ Required environment variables:
 `SCI_TALLY_SENDER`|JSON-serialized sender address|`{"name":"Joshua Harms", "address":"joshua@example.com","replyTo":"joshua@example.com"}`|
 `SCI_TALLY_PRIMARY_RECIPIENT`|JSON-serialized recipient address|`{"name":"Joshua Harms", "address":"joshua@example.com"}`|
 `SCI_TALLY_CC_LIST`|JSON-serialized list of CC recipients|`[{"name":"Joshua Harms", "address":"joshua@example.com"}]`|
+
+## GitHub Actions Setup
+
+This repository includes a GitHub Actions workflow that automatically builds and pushes container images to GitHub Container Registry when code is pushed to the main branch.
