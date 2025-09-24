@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sci-tally
+spec:
+  restartPolicy: Never
+  containers:
+  - name: job
+    image: ghcr.io/keith-m-merrick-co-inc/sci-tally-tool@sha256:ce96293351d22a4c49409a942c7d1406e19aad3b45f11c0595918496fc853a2b
+    envFrom:
+    - secretRef:
+        name: sci-tally-tool-secrets

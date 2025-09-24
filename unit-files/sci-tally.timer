@@ -1,0 +1,10 @@
+[Unit]
+Description=Run sci-tally-tool on a timer
+
+[Timer]
+OnCalendar=Mon 11:55
+Persistent=true
+Unit=sci-tally.service
+
+[Install]
+WantedBy=timers.target
